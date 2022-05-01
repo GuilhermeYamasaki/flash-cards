@@ -1,4 +1,4 @@
-body {
+body{
     margin: 0;
     padding: 0;
     font-family: 'montserrat';
@@ -14,16 +14,24 @@ nav ul {
     margin: 0;
     padding: 0;
     height: 100%;
-    width: 260px;
+    width: 50px;
     position: fixed;
     top: 0;
     left: 0;
-    background-color: #2b2626
+    background-color: #2b2626;
 }
 
-nav ul li {
-    list-style: none
+nav ul > li {
+    display: none;
 }
+
+nav ul:hover {
+   width: 260px;
+}
+
+nav ul:hover > li {
+    display: block;
+ }
 
 nav ul li a {
     display: block;
@@ -57,18 +65,3 @@ nav ul li a:hover:before {
     width: 95%
 }
 
-.wrapper {
-    margin-left: 260px
-}
-
-.section {
-    display: grid;
-    place-items: center;
-    min-height: 100vh;
-    text-align: center
-}
-
-.box-area h2 {
-    text-transform: uppercase;
-    font-size: 30px
-}
