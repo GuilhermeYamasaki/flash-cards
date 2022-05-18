@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>Criar deck</h1>
-    <form action="create-deck.php" method = "POST">
+    <form action="app/db/create-table.php" method = "POST">
         <input type="text" placeholder = "Nome do deck" name = "nameDeck" id = "name">
         <button>Criar</button>
     </form>

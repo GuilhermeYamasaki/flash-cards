@@ -1,19 +1,16 @@
 <?php
 
-use PDO;
+function novaConexao ($banco = 'flash-cards') {
+    $servidor = '127.0.0.1:3306';
+    $usuario = 'root';
+    $senha = '';
 
-function query(string $sql): array {
-    $dbType = 'mysql';
-    $dbHost = '127.0.0.1';
-    $dbName = 'flash-card';
-    $dbPort = 3306;
-    $dbUser = 'root';
-    $dbPassword = '';
+    try {
+        $conexao = new PDO ("mysql:host = $servidor; dbname = $banco",
+        $usuario, $senha);
 
-    $conn = new PDO($dbType . ':host=' . $dbHost . ';port=' . $dbPort . '; dbname=' . 
-    $dbName, $dbUser, $dbPassword);
-
-    $stmt = $conn->prepare($sql);
-    $stmt->execute();
-    return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        return $conexao;
+    } catch (PDOException $e) {
+        die ('Erro: ' . $e -> getMessage());
+    }
 }
