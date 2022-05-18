@@ -12,7 +12,7 @@
         <ul>
             <li class="logo"><img src="app/css/stickman.png"></li>
             <li><a href="#">Home</a></li>
-            <li><a href="app/decklist.php">Decks</a></li>
+            <li><a href="app/view/decklist.php">Decks</a></li>
             <li><a href="#">Friends</a></li>
             <li><a href="#">Settings</a></li>
             <li><a href="about.php">About</a></li>
