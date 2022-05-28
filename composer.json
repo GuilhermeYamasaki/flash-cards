@@ -1,0 +1,19 @@
+{
+    "name": "guilh/flash-cards-study",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Guilherme Yamasaki",
+            "email": "guilhermeyyamasaki1@gmail.com"
+        }
+    ],
+    "scripts": {
+        "dev": "php -S localhost:8000"
+    },
+    "require": {}
+}
